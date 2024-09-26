@@ -96,6 +96,14 @@ function App() {
 
   // }
 
+    const handlerUsuario=(USER)=>{
+        if(DateMS === ''){
+          alert('Selecciona una Fecha y despues un Usuario')
+          return
+        }
+        setTecnicoState(USER)
+    }
+
 
 
   
@@ -115,9 +123,9 @@ function App() {
 
         <Row className='d-flex text-center'>
             <Col><input type='date'  onChange={(e)=>setDate(e)}/> </Col>
-            <Col><Button className={tecnicoState !== 'usuario1' ? 'gray' : 'blue' } onClick={()=>setTecnicoState('usuario1')}>Usuario1</Button> </Col>
-            <Col><Button className={tecnicoState !== 'usuario2' ? 'gray' : 'blue' } onClick={()=>setTecnicoState('usuario2')}>Usuario2</Button> </Col>
-            <Col><Button className={tecnicoState !== 'usuario3' ? 'gray' : 'blue' } onClick={()=>setTecnicoState('usuario3')}>Usuario3</Button> </Col>
+            <Col><Button className={tecnicoState !== 'usuario1' ? 'gray' : 'blue' } onClick={()=>handlerUsuario('usuario1')}>Usuario1</Button> </Col>
+            <Col><Button className={tecnicoState !== 'usuario2' ? 'gray' : 'blue' } onClick={()=>handlerUsuario('usuario2')}>Usuario2</Button> </Col>
+            <Col><Button className={tecnicoState !== 'usuario3' ? 'gray' : 'blue' } onClick={()=>handlerUsuario('usuario3')}>Usuario3</Button> </Col>
         </Row>
 
         <Row>
@@ -139,7 +147,7 @@ function App() {
                     <p>Comentarios: {el.comentarios}</p>
                     <p>Tarea Creada el: {msecToDateNumbers(el.createdAt)}</p>
 
-                    <Button disabled={el.completed} variant="primary" className={el.completed ? '' : 'red'}>
+                    <Button disabled={true} variant="primary" className={el.completed ? '' : 'red'}>
                         {el.completed ? 'Completado' : 'Pendiente'}
                     </Button>
 
