@@ -119,6 +119,7 @@ function App() {
 
 
       <Container>
+      <h1>Historial de Servicios</h1>
       <hr />
 
         <Row className='d-flex text-center'>
