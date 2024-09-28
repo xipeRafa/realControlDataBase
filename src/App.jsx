@@ -141,6 +141,8 @@ function App() {
                     <hr />
                     <p>Cliente: {el.nombreCliente}</p>
                     <p>Direccion: {el.direccionCliente}</p>
+                    <p>Telefono: {el.telefonoCliente}</p>
+                    <p>Correo: {el.correoCliente}</p>    
                     <p>Servicio: {el.servicioDescripcion}</p>
                     <p>Hora: {el.fechaMeta}</p>
                     <p>Tipo: {el.tipoDeServicio}</p>
