@@ -119,7 +119,7 @@ function App() {
 
 
       <Container>
-      <h1>Historial de Servicios por Fecha</h1>
+      <h1>Historial de Servicios Por Fecha</h1>
       <hr />
 
         <Row className='d-flex text-center'>
@@ -154,7 +154,14 @@ function App() {
                         {el.completed ? 'Completado' : 'Pendiente'}
                     </Button>
 
-                    <p className={!el?.completedTime ? 'd-none' : 'warning'}>Completado el: {msecToDateNumbers(el?.completedTime)}</p>
+                    <p className={!el?.completedTime ? 'd-none' : 'warning'}>Iniciado el: {msecToDateNumbers(el?.completedTime)}</p>
+
+
+                    <Button disabled={true} disabled={el.signedCustomer} variant="primary" className={el.signedCustomer ? '' : 'red'} >
+                        {!el.signedCustomer ? 'Firmar' : 'Firmado'}
+                    </Button>
+
+                    <p className={!el?.signedCustomerTime ? 'd-none' : 'warning'}>Firmado el: {msecToDateNumbers(el?.signedCustomerTime)}</p>
 
                     <hr />
                   </div>
