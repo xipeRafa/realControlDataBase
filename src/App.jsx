@@ -157,7 +157,7 @@ function App() {
                     <p className={!el?.completedTime ? 'd-none' : 'warning'}>Iniciado el: {msecToDateNumbers(el?.completedTime)}</p>
 
 
-                    <Button disabled={true} disabled={el.signedCustomer} variant="primary" className={!el.signedCustomer ? 'red' : ''} >
+                    <Button disabled={true} variant="primary" className={!el.signedCustomer ? 'red' : ''} >
                         {!el.signedCustomer ? 'Firmar' : 'Firmado'}
                     </Button>
 
