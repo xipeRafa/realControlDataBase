@@ -28,6 +28,7 @@ textarea{
 .red{
   background-color: red!important;
   border: none!important;
+  margin-right: 4px!important;
 }
 .blue{
   background-color: blue!important;

@@ -151,13 +151,13 @@ function App() {
                     <p>Tarea Creada el: {msecToDateNumbers(el.createdAt)}</p>
 
                     <Button disabled={true} variant="primary" className={el.completed ? '' : 'red'}>
-                        {el.completed ? 'Completado' : 'Pendiente'}
+                        {el.completed ? 'Iniciado' : 'Pendiente'}
                     </Button>
 
                     <p className={!el?.completedTime ? 'd-none' : 'warning'}>Iniciado el: {msecToDateNumbers(el?.completedTime)}</p>
 
 
-                    <Button disabled={true} disabled={el.signedCustomer} variant="primary" className={el.signedCustomer ? '' : 'red'} >
+                    <Button disabled={true} disabled={el.signedCustomer} variant="primary" className={!el.signedCustomer ? 'red' : ''} >
                         {!el.signedCustomer ? 'Firmar' : 'Firmado'}
                     </Button>
 
